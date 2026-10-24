@@ -15,7 +15,7 @@ Além de sua relevância biológica, a HEL é um modelo amplamente utilizado em 
 | Modelagem de anticorpo | [ABodyBuilder2 — OPIG/SAbPred](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/sabpred/abodybuilder2/) | Predizer a estrutura do Fv a partir das sequências VH e VL |
 | Avaliação de qualidade estrutural | [QMEANDisCo](https://swissmodel.expasy.org/qmean) | Avaliar qualidade global e por resíduo do modelo estrutural |
 | Predição de epítopos | [BepiPred-3.0 — servidor web da DTU](https://services.healthtech.dtu.dk/services/BepiPred-3.0/) | Estimar resíduos candidatos a epítopos de células B a partir da sequência do antígeno |
-| Docking | [HDOCK](http://hdock.phys.hust.edu.cn/) | Gerar poses de interação entre antígeno e anticorpo |
+| Docking | [ClusPro2.0](https://cluspro.org/) | Gerar poses de interação entre antígeno e anticorpo |
 | Visualização de estruturas | [RCSB Mol* 3D Viewer](https://www.rcsb.org/3d-view) | Visualizar PDBs locais e estruturas depositadas no PDB |
 | Energia de ligação estimada | [MM/GB(PB)SA — Tamarind Bio](https://app.tamarind.bio/tools/gbsa) | Estimar energia de ligação a partir de um complexo proteico |
 | Perfil de desenvolvibilidade | [TAP2 — Therapeutic Antibody Profiler](https://app.tamarind.bio/tools/tap) | Avaliar características relacionadas ao perfil de anticorpos terapêuticos |
@@ -90,32 +90,27 @@ KVFGRCELAAAMKRHGLDNYRGYSLGNWVCAAKFESNFNTQATNRNTDGSTDYGILQINSRWWCNDGRTPGSRNLCNIPC
 
 **Produto desta etapa:** gráfico/CSV de escores e uma lista curta de resíduos candidatos.
 
-**Parte C — Docking dirigido com HDOCK**
+**Parte C — Docking proteína–proteína com ClusPro (Antibody Mode)**
 
-**Ferramenta:** [HDOCK](http://hdock.phys.hust.edu.cn/)
+**Ferramenta:** [ClusPro](https://cluspro.org/)
 
-Nesta etapa, será realizado um docking proteína–proteína direcionado, utilizando como informação prévia os resíduos da lisozima identificados pelo BepiPred-3.0 que também estão presentes na interface experimental do complexo HyHEL-5–lisozima (PDB: [1YQV](https://www.rcsb.org/structure/1YQV)).
+Nesta etapa, será realizado o docking entre o Fv modelado e a lisozima, utilizando o modo específico para anticorpos do ClusPro. Diferentemente do docking dirigido por resíduos, não será imposto previamente o epítopo identificado pelo BepiPred-3.0. A localização da interface será investigada posteriormente, por meio da inspeção das poses geradas.
 
 ### Procedimento
 
-1. Em **Input Receptor Molecule**, informe `1YQV:Y` como PDB ID:cadeia ou carregue um arquivo PDB contendo apenas a cadeia Y, correspondente à lisozima.
-2. Em **Input Ligand Molecule**, carregue o PDB do fragmento Fv gerado pelo ImmuneBuilder, mantendo as cadeias pesada e leve no mesmo arquivo, caso sejam fornecidas separadamente.
-3. Em **Advanced Options**, marque **Template-free docking only** para realizar a busca sem utilizar modelos de complexos conhecidos como templates.
-4. Em **Receptor binding site residue(s)**, informe os resíduos da lisozima que coincidem com a interface experimental e foram identificados na análise do BepiPred-3.0. Utilize a numeração correspondente ao arquivo PDB submetido e o formato exigido pelo HDOCK (45-50:Y, 61:Y, 68:Y, 73:Y).
-6. Informe um nome para a tarefa e um e-mail, caso solicitado, e envie o trabalho.
-7. Ao término, baixe a pose mais bem ranqueada para inspeção. Clique no [Link](http://hdock.phys.hust.edu.cn/data/6add1574e997c/) para um job concluido.
+1. Acesse o ClusPro e faça login ou crie uma conta, caso necessário. Verifique as condições de acesso e a disponibilidade do serviço.
+2. Em **Job Name**, informe um nome para a tarefa, por exemplo, `Lysozyme_Antibody_Docking`.
+3. Em **Receptor**, carregue o arquivo PDB do anticorpo modelado pelo ImmuneBuilder, contendo as cadeias pesada e leve do Fv.
+4. Em **Ligand**, informe o código PDB `1YQV` e selecione a cadeia `Y`, correspondente à lisozima, ou carregue um arquivo PDB equivalente contendo apenas essa cadeia.
+5. Em **Advanced Options → Antibody Mode**, marque **Use Antibody Mode**. O ClusPro recomenda que o anticorpo seja definido como receptor e o antígeno como ligante. Mantenha essa orientação e, se possível, utilize também a opção **Automatically Mask non-CDR regions**, que reduz a participação das regiões não pertencentes às CDRs na busca por interfaces.
+6. Não informe restrições de resíduos baseadas no BepiPred-3.0 nesta etapa. O objetivo é permitir que o programa explore possíveis orientações de interação sem impor previamente a região do epítopo.
+7. Submeta o trabalho e aguarde o processamento. Quando os resultados estiverem disponíveis, baixe os modelos dos clusters mais bem ranqueados e selecione poses representativas para análise estrutural.
 
-*Como avaliar as poses*
+### Análise das poses e comparação com o BepiPred-3.0
 
-Abra os complexos gerados no [RCSB Mol* Viewer](https://www.rcsb.org/3d-view) ou no UCSF ChimeraX e examine:
-
-- **Orientação do anticorpo:** o Fv se aproxima do antígeno pelo lado das CDRs?
-- **Interface molecular:** há contatos entre as CDRs e os resíduos selecionados da lisozima?
-- **Complementaridade estrutural:** existem colisões evidentes ou regiões de contato pouco plausíveis?
-- **Consistência das poses:** as soluções alternativas apresentam orientações semelhantes?
-- **Referência experimental:** a região de interação prevista é compatível com a interface observada no complexo 1YQV?
-
-**Questão para discussão:** a orientação prevista posiciona as CDRs em contato com a região selecionada? Quais evidências estruturais apoiam essa pose e quais análises adicionais seriam necessárias para aumentar a confiança na predição?
+1. Abra as poses selecionadas em um visualizador molecular, como o [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/) ou o [RCSB Mol* Viewer](https://www.rcsb.org/3d-view).
+2. Verifique se as poses mais bem ranqueadas apresentam orientações semelhantes e se o anticorpo se aproxima da lisozima pelas regiões das CDRs.
+3. Identifique os resíduos da lisozima que participam da interface em cada pose e compare-os com as regiões candidatas identificadas pelo BepiPred-3.0.
 
 **Produto desta etapa:** complexo(s) PDB e ranking de poses.
 
