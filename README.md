@@ -103,7 +103,7 @@ Nesta etapa, será realizado um docking proteína–proteína direcionado, utili
 3. Em **Advanced Options**, marque **Template-free docking only** para realizar a busca sem utilizar modelos de complexos conhecidos como templates.
 4. Em **Receptor binding site residue(s)**, informe os resíduos da lisozima que coincidem com a interface experimental e foram identificados na análise do BepiPred-3.0. Utilize a numeração correspondente ao arquivo PDB submetido e o formato exigido pelo HDOCK (45-50:Y, 61:Y, 68:Y, 73:Y).
 6. Informe um nome para a tarefa e um e-mail, caso solicitado, e envie o trabalho.
-7. Ao término, baixe a pose mais bem ranqueada para inspeção.
+7. Ao término, baixe a pose mais bem ranqueada para inspeção. Clique no [Link](http://hdock.phys.hust.edu.cn/data/6add1574e997c/) para um job concluido.
 
 *Como avaliar as poses*
 
