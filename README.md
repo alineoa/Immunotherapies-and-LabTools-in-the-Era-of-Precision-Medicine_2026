@@ -96,7 +96,7 @@ KVFGRCELAAAMKRHGLDNYRGYSLGNWVCAAKFESNFNTQATNRNTDGSTDYGILQINSRWWCNDGRTPGSRNLCNIPC
 
 Nesta etapa, será realizado o docking entre o Fv modelado e a lisozima, utilizando o modo específico para anticorpos do ClusPro. Diferentemente do docking dirigido por resíduos, não será imposto previamente o epítopo identificado pelo BepiPred-3.0. A localização da interface será investigada posteriormente, por meio da inspeção das poses geradas.
 
-### Procedimento
+*Procedimento*
 
 1. Acesse o ClusPro e faça login ou crie uma conta, caso necessário. Verifique as condições de acesso e a disponibilidade do serviço.
 2. Em **Job Name**, informe um nome para a tarefa, por exemplo, `Lysozyme_Antibody_Docking`.
@@ -106,7 +106,7 @@ Nesta etapa, será realizado o docking entre o Fv modelado e a lisozima, utiliza
 6. Não informe restrições de resíduos baseadas no BepiPred-3.0 nesta etapa. O objetivo é permitir que o programa explore possíveis orientações de interação sem impor previamente a região do epítopo.
 7. Submeta o trabalho e aguarde o processamento. Quando os resultados estiverem disponíveis, baixe os modelos dos clusters mais bem ranqueados e selecione poses representativas para análise estrutural.
 
-### Análise das poses e comparação com o BepiPred-3.0
+*Análise das poses e comparação com o BepiPred-3.0*
 
 1. Abra as poses selecionadas em um visualizador molecular, como o [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/) ou o [RCSB Mol* Viewer](https://www.rcsb.org/3d-view).
 2. Verifique se as poses mais bem ranqueadas apresentam orientações semelhantes e se o anticorpo se aproxima da lisozima pelas regiões das CDRs.
