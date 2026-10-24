@@ -163,11 +163,7 @@ Para a aula, usaremos novamente a lisozima como um alvo-modelo. Nesta etapa, a e
 
 **Parte A — Seleção da região-alvo**
 
-1. Abra [BepiPred-3.0](https://services.healthtech.dtu.dk/services/BepiPred-3.0/) e analise a mesma sequência da lisozima.
-2. Abra [7S2Q](https://www.rcsb.org/structure/7S2Q) no [Mol* Viewer](https://www.rcsb.org/3d-view) e inspecione a superfície do antígeno.
-3. Escolha uma região acessível e espacialmente coerente para testar. Use os escores do BepiPred como uma fonte de evidência, não como a única regra de escolha.
-
-**Como escolher hotspots:** selecione alguns resíduos de superfície que representem a região que o binder deverá reconhecer. Use o seletor de resíduos da ferramenta para evitar erros de numeração. Os hotspots devem pertencer à cadeia e à numeração do PDB efetivamente carregado. Não copie números de uma figura ou de outra estrutura sem conferir a correspondência.
+Abra [7S2Q](https://www.rcsb.org/structure/7S2Q) no [Mol* Viewer](https://www.rcsb.org/3d-view) e inspecione a superfície do antígeno e a sequência para verificar quais resíduos correspondem aqueles identificados pelo preditor de epítopos. Use o seletor de resíduos da ferramenta para evitar erros de numeração. Os hotspots devem pertencer à cadeia e à numeração do PDB efetivamente carregado. Não copie números de uma figura ou de outra estrutura sem conferir a correspondência.
 
 **Parte B — Geração de candidatos com RFantibody**
 
