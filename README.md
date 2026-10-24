@@ -167,10 +167,10 @@ Abra [7S2Q](https://www.rcsb.org/structure/7S2Q) no [Mol* Viewer](https://www.rc
 1. Em **Framework**, mantenha `hu-4D5-8_Fv`.
 2. Em **Target File**, carregue o arquivo PDB de 7S2Q ou informe o PDB ID e faça o carregamento, se essa opção estiver disponível.
 3. Em **Antigen Chain IDs**, selecione a cadeia `A` da lisozima.
-4. Em **Hotspot Residues**, selecione os resíduos escolhidos na parte anterior. Use o seletor visual quando possível e confirme a numeração no PDB.
-5. Em **Regions to design**, a configuração apresentada pode incluir `hcdr1,hcdr2,hcdr3,lcdr1,lcdr2,lcdr3`. Para a primeira rodada, use a configuração padrão sugerida pela ferramenta, a menos que o objetivo da aula seja estudar o efeito de redesenhar apenas algumas CDRs.
-6. Mantenha os comprimentos de CDR em `auto` na primeira rodada, se disponível, para reduzir o número de parâmetros que os alunos precisam escolher.
-7. Defina **Number of Designs** como 5–10 para uma aula. Isso serve para familiarização e comparação; não representa uma campanha de design de produção.
+4. Em **Hotspot Residues**, selecione os resíduos escolhidos na parte anterior. Use o seletor visual quando possível e confirme a numeração no PDB (45 46 47 48 49 68 73 102 107).
+5. Em **Regions to design**, a configuração apresentada pode incluir `hcdr1,hcdr2,hcdr3,lcdr1,lcdr2,lcdr3`. Para a primeira rodada, use a configuração padrão sugerida pela ferramenta.
+6. Mantenha os comprimentos de CDR em `auto` na primeira rodada.
+7. Defina **Number of Designs** entre 3 e 10.
 8. Envie a tarefa e guarde os arquivos de sequência e estrutura retornados para cada candidato.
 
 > Se a ferramenta retornar poucos candidatos ou falhar, reduza o número de variáveis, confira a cadeia e os hotspots e tente novamente. Os tempos de execução e os limites podem variar conforme a disponibilidade da plataforma.
