@@ -77,8 +77,8 @@ Use **Matchmaker** no ChimeraX para alinhar duas estruturas homólogas, por exem
 ### 6. Docking com ClusPro — Antibody Mode
 
 1. Acesse o [ClusPro](https://cluspro.org/) e inicie um trabalho.
-2. Carregue o modelo do Fv do pembrolizumab como **Receptor** e a estrutura de PD-1 como **Ligand**. Use arquivos PDB preparados e confira os IDs das cadeias.
-3. Em *Advanced Options*, ative **Antibody Mode** e, se disponível, **Automatically Mask non-CDR regions**.
+2. Carregue o modelo do Fv do pembrolizumab como **Receptor** e a estrutura de PD-1 como **Ligand**. Use arquivos PDB preparados e confira os IDs das cadeias. Se for utilizar o modelo AF3, é necessário converter o arquivo mmCIF para PDB.
+3. Em *Advanced Options*, ative **Antibody Mode**.
 4. Não imponha os resíduos do BepiPred como restrições nesta etapa. O objetivo é avaliar onde as poses geradas se posicionam; a comparação com o epítopo previsto será feita depois.
 5. Baixe algumas poses bem ranqueadas e abra-as no ChimeraX. Verifique se as CDRs participam da interface, se as poses convergem para uma região semelhante e se a interface coincide com a região observada em 5B8C e/ou prevista pelo BepiPred.
 
