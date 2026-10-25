@@ -61,7 +61,6 @@ Use preferencialmente o **UCSF ChimeraX**. Abra os PDBs dos dois modelos e, quan
 - **Stick:** examinar resíduos específicos, contatos e cadeias laterais.
 - **Colorir por cadeia:** distinguir VH e VL ou anticorpo e antígeno.
 - **Colorir por pLDDT/confiança:** localizar regiões mais e menos confiáveis, se o campo estiver disponível no arquivo.
-- **Mostrar CDRs:** usar a numeração do ANARCI para localizar CDR-H1/H2/H3 e CDR-L1/L2/L3.
 
 **Para comparar estruturas**
 Use **Matchmaker** no ChimeraX para alinhar duas estruturas homólogas, por exemplo, o modelo do Fv e a região Fv do pembrolizumab na estrutura experimental. Compare o alinhamento global e as diferenças nas CDRs. Confira se as cadeias correspondem antes de executar o alinhamento; não compare diretamente cadeias de identidade diferente.
