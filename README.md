@@ -15,7 +15,7 @@ Estrutura experimental de referência: [PDB 5B8C — PD-1 em complexo com o Fv d
 - [AlphaFold Server](https://alphafoldserver.com/) — predizer a estrutura do anticorpo ou do complexo, conforme os tipos de entrada aceitos pelo servidor.
 - [BepiPred-3.0](https://services.healthtech.dtu.dk/services/BepiPred-3.0/) — prever regiões candidatas a epítopos a partir da sequência do PD-1.
 - [ClusPro](https://cluspro.org/) — docking proteína–proteína, usando **Antibody Mode**.
-- [MolProbity](https://molprobity.biochem.duke.edu/) — validar geometria e examinar o gráfico de Ramachandran.
+- [MolProbity](https://molprobity.lbl.gov/) — validar geometria e examinar o gráfico de Ramachandran.
 - [QMEAN](https://swissmodel.expasy.org/qmean) - validar geometria via QMEANDisCo
 - [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/) — visualização e comparação estrutural.
 
@@ -45,7 +45,7 @@ Estrutura experimental de referência: [PDB 5B8C — PD-1 em complexo com o Fv d
 
 ### 3. Validar a geometria com MolProbity e QMEAN
 
-1. Envie separadamente os modelos do ABodyBuilder2 e do AF3 ao [MolProbity](https://molprobity.biochem.duke.edu/) e ao [QMEAN](https://swissmodel.expasy.org/qmean).
+1. Envie separadamente os modelos do ABodyBuilder2 e do AF3 ao [MolProbity](https://molprobity.lbl.gov/) e ao [QMEAN](https://swissmodel.expasy.org/qmean).
 2. Execute a validação e examine o **gráfico de Ramachandran**.
 3. Registre a porcentagem de resíduos em regiões favorecidas, permitidas e não permitidas (*outliers*). Verifique se os outliers estão em loops/CDRs ou no arcabouço. No QMEANDisCo, avalie as métricas de qualidade global e local.
 
