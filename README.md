@@ -93,13 +93,24 @@ Use **Matchmaker** no ChimeraX para alinhar duas estruturas homólogas, por exem
 
 ## Estudo de caso 2 — Design *de novo* de anticorpos contra PD-1
 
-Use a estrutura experimental de PD-1 em [5B8C](https://www.rcsb.org/structure/5B8C) ou outra estrutura de PD-1 adequada, removendo as cadeias que não forem necessárias. Escolha a superfície-alvo e confira a numeração dos resíduos diretamente no arquivo carregado.
+Use a estrutura experimental de PD-1 disponível no [PDB 5B8C](https://www.rcsb.org/structure/5B8C) ou outra estrutura adequada, removendo as cadeias desnecessárias. Escolha a superfície-alvo e confira a numeração dos resíduos diretamente no arquivo carregado.
 
 1. Acesse [RFantibody](https://app.tamarind.bio/tools/rfantibody), se disponível para a atividade.
 2. Carregue a estrutura de PD-1 e selecione a cadeia correta do antígeno.
 3. Escolha resíduos *hotspot* na superfície de interesse. Confirme os números no PDB; não copie a numeração de outra estrutura sem verificar.
 4. Gere um pequeno conjunto de candidatos e salve as sequências e estruturas retornadas.
-5. Abra os complexos no ChimeraX. Examine a orientação das CDRs, colisões evidentes, tamanho da interface e contatos com os hotspots.
-6. Selecione alguns candidatos para comparação. Quando comparar modelos, use **Matchmaker** apenas para estruturas homólogas e confirme que as cadeias correspondem.
+5. Abra os complexos no ChimeraX. Examine a orientação das CDRs, colisões evidentes, tamanho da interface e contatos com os *hotspots*.
+6. Acesse o [TAP2](https://app.tamarind.bio/tools/tap) e submeta as sequências das regiões variáveis das cadeias pesada (VH) e leve (VL) de cada candidato. Registre as métricas disponíveis, incluindo comprimento total das CDRs, patches de hidrofobicidade superficial, patches de carga positiva e negativa e simetria de carga do Fv. Identifique possíveis características desfavoráveis à solubilidade, expressão ou estabilidade e compare os resultados entre os candidatos.
+7. Acesse o [BioPhi](https://app.tamarind.bio/tools/biophi) e analise as sequências VH e VL. Registre o escore de *humanness* OASis, quando disponível, e examine possíveis sugestões de humanização. Compare as sequências originais e modificadas, identificando alterações em regiões estruturais e CDRs. Discuta possíveis benefícios e riscos dessas modificações, considerando que maior similaridade com sequências humanas não garante menor imunogenicidade nem preservação da ligação ao antígeno.
+8. Acesse o [Aggrescan3D](https://app.tamarind.bio/tools/aggrescan3d) e submeta as estruturas dos candidatos. Compare os escores de propensão à agregação e identifique regiões com valores elevados. Visualize essas regiões no ChimeraX e verifique se estão localizadas nas CDRs, no arcabouço do anticorpo ou em superfícies expostas. Sempre que possível, utilize estruturas e configurações equivalentes para comparar os candidatos.
+9. Selecione alguns candidatos para comparação integrada. Relacione os resultados do TAP2, BioPhi e Aggrescan3D com as características estruturais observadas no ChimeraX. Discuta quais candidatos parecem mais promissores considerando a geometria do complexo, as propriedades de *developability* e a similaridade com sequências humanas. Quando comparar estruturas homólogas, utilize **Matchmaker** e confirme que as cadeias correspondem corretamente.
 
-Os candidatos são hipóteses computacionais, não anticorpos validados. A aparência da pose, isoladamente, não demonstra ligação, afinidade, especificidade ou atividade biológica.
+**Questões para discussão**
+
+- Os candidatos apresentam orientações das CDRs compatíveis com o reconhecimento da superfície escolhida em PD-1?
+- Os candidatos com melhores características de interação também apresentam perfis favoráveis de *developability*?
+- Os resultados do TAP2 e do Aggrescan3D são consistentes? Que informações complementares cada ferramenta fornece?
+- As sugestões do BioPhi modificam regiões importantes para o reconhecimento do antígeno? Como essas alterações poderiam ser avaliadas?
+- Quais candidatos você priorizaria para validação experimental e quais evidências computacionais sustentam essa escolha?
+
+Os candidatos gerados e as métricas obtidas são hipóteses computacionais, não evidências experimentais. A aparência da pose ou os escores de predição, isoladamente, não demonstram ligação, afinidade, especificidade, estabilidade, solubilidade ou atividade biológica. A confirmação dessas propriedades exige validação experimental.
