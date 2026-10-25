@@ -16,6 +16,7 @@ Estrutura experimental de referência: [PDB 5B8C — PD-1 em complexo com o Fv d
 - [BepiPred-3.0](https://services.healthtech.dtu.dk/services/BepiPred-3.0/) — prever regiões candidatas a epítopos a partir da sequência do PD-1.
 - [ClusPro](https://cluspro.org/) — docking proteína–proteína, usando **Antibody Mode**.
 - [MolProbity](https://molprobity.biochem.duke.edu/) — validar geometria e examinar o gráfico de Ramachandran.
+- [QMEAN](https://swissmodel.expasy.org/qmean) - validar geometria via QMEANDisCo
 - [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/) — visualização e comparação estrutural.
 
 ## Estudo de caso 1 — Modelagem e análise do pembrolizumab–PD-1
@@ -42,11 +43,11 @@ Estrutura experimental de referência: [PDB 5B8C — PD-1 em complexo com o Fv d
 
 **Importante:** pLDDT e RMSPE são métricas diferentes e não devem ser comparadas numericamente entre si. Registre qual métrica pertence a cada ferramenta e interprete a confiança por região, não apenas pelo valor global. A disponibilidade e a forma de exportação dessas métricas podem variar conforme o servidor e o formato do arquivo.
 
-### 3. Validar a geometria com MolProbity
+### 3. Validar a geometria com MolProbity e QMEAN
 
-1. Envie separadamente os modelos do ABodyBuilder2 e do AF3 ao [MolProbity](https://molprobity.biochem.duke.edu/).
+1. Envie separadamente os modelos do ABodyBuilder2 e do AF3 ao [MolProbity](https://molprobity.biochem.duke.edu/) e ao [QMEAN](https://swissmodel.expasy.org/qmean).
 2. Execute a validação e examine o **gráfico de Ramachandran**.
-3. Registre a porcentagem de resíduos em regiões favorecidas, permitidas e não permitidas (*outliers*). Verifique se os outliers estão em loops/CDRs ou no arcabouço.
+3. Registre a porcentagem de resíduos em regiões favorecidas, permitidas e não permitidas (*outliers*). Verifique se os outliers estão em loops/CDRs ou no arcabouço. No QMEANDisCo, avalie as métricas de qualidade global e local.
 
 A validação geométrica complementa as métricas de confiança: um modelo com confiança alta ainda pode apresentar problemas estereoquímicos.
 
