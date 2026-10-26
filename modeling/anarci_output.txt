@@ -1,0 +1,250 @@
+# Input Sequence
+# ANARCI numbered
+# Domain 1 of 2
+# Most significant HMM hit
+#|species|chain_type|e-value|score|seqstart_index|seqend_index|
+#|mouse|H|6e-54|172.5|0|119|
+# Most sequence-identical germlines
+#|species|v_gene|v_identity|j_gene|j_identity|
+#|human|IGHV1-2*02|0.80|IGHJ4*01|0.93|
+# Scheme = martin
+H 1       Q
+H 2       V
+H 3       Q
+H 4       L
+H 5       V
+H 6       Q
+H 7       S
+H 8       G
+H 9       V
+H 10      E
+H 11      V
+H 12      K
+H 13      K
+H 14      P
+H 15      G
+H 16      A
+H 17      S
+H 18      V
+H 19      K
+H 20      V
+H 21      S
+H 22      C
+H 23      K
+H 24      A
+H 25      S
+H 26      G
+H 27      Y
+H 28      T
+H 29      F
+H 30      T
+H 31      N
+H 32      Y
+H 33      Y
+H 34      M
+H 35      Y
+H 36      W
+H 37      V
+H 38      R
+H 39      Q
+H 40      A
+H 41      P
+H 42      G
+H 43      Q
+H 44      G
+H 45      L
+H 46      E
+H 47      W
+H 48      M
+H 49      G
+H 50      G
+H 51      I
+H 52      N
+H 52    A P
+H 53      S
+H 54      N
+H 55      G
+H 56      G
+H 57      T
+H 58      N
+H 59      F
+H 60      N
+H 61      E
+H 62      K
+H 63      F
+H 64      K
+H 65      N
+H 66      R
+H 67      V
+H 68      T
+H 69      L
+H 70      T
+H 71      T
+H 72      D
+H 72    A S
+H 72    B S
+H 72    C T
+H 73      T
+H 74      T
+H 75      A
+H 76      Y
+H 77      M
+H 78      E
+H 79      L
+H 80      K
+H 81      S
+H 82      L
+H 83      Q
+H 84      F
+H 85      D
+H 86      D
+H 87      T
+H 88      A
+H 89      V
+H 90      Y
+H 91      Y
+H 92      C
+H 93      A
+H 94      R
+H 95      R
+H 96      D
+H 97      Y
+H 98      R
+H 99      F
+H 100     D
+H 100   A M
+H 100   B G
+H 100   C F
+H 101     D
+H 102     Y
+H 103     W
+H 104     G
+H 105     Q
+H 106     G
+H 107     T
+H 108     T
+H 109     V
+H 110     T
+H 111     V
+H 112     S
+H 113     S
+# Domain 2 of 2
+# Most significant HMM hit
+#|species|chain_type|e-value|score|seqstart_index|seqend_index|
+#|human|K|3e-55|176.6|447|557|
+# Most sequence-identical germlines
+#|species|v_gene|v_identity|j_gene|j_identity|
+#|human|IGKV3-11*01|0.86|IGKJ4*01|1.00|
+# Scheme = martin
+L 1       E
+L 2       I
+L 3       V
+L 4       L
+L 5       T
+L 6       Q
+L 7       S
+L 8       P
+L 9       A
+L 10      T
+L 11      L
+L 12      S
+L 13      L
+L 14      S
+L 15      P
+L 16      G
+L 17      E
+L 18      R
+L 19      A
+L 20      T
+L 21      L
+L 22      S
+L 23      C
+L 24      R
+L 25      A
+L 26      S
+L 27      K
+L 28      G
+L 29      V
+L 30      S
+L 30    A T
+L 30    B S
+L 30    C G
+L 30    D Y
+L 31      S
+L 32      Y
+L 33      L
+L 34      H
+L 35      W
+L 36      Y
+L 37      Q
+L 38      Q
+L 39      K
+L 40      P
+L 41      G
+L 42      Q
+L 43      A
+L 44      P
+L 45      R
+L 46      L
+L 47      L
+L 48      I
+L 49      Y
+L 50      L
+L 51      A
+L 52      S
+L 53      Y
+L 54      L
+L 55      E
+L 56      S
+L 57      G
+L 58      V
+L 59      P
+L 60      A
+L 61      R
+L 62      F
+L 63      S
+L 64      G
+L 65      S
+L 66      G
+L 67      S
+L 68      G
+L 69      T
+L 70      D
+L 71      F
+L 72      T
+L 73      L
+L 74      T
+L 75      I
+L 76      S
+L 77      S
+L 78      L
+L 79      E
+L 80      P
+L 81      E
+L 82      D
+L 83      F
+L 84      A
+L 85      V
+L 86      Y
+L 87      Y
+L 88      C
+L 89      Q
+L 90      H
+L 91      S
+L 92      R
+L 93      D
+L 94      L
+L 95      P
+L 96      L
+L 97      T
+L 98      F
+L 99      G
+L 100     G
+L 101     G
+L 102     T
+L 103     K
+L 104     V
+L 105     E
+L 106     I
+L 107     K
+//
